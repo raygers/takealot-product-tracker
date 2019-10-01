@@ -12,8 +12,8 @@ The solution will create the following resources on AWS:
 1. API Gateway Enpdoint.
 2. API Lambda function to process all API requests
 3. Lambda function which will be triggered twice a day by a cloudwatch scheduled event.
-4. DynamoDB Table.
-5. API key stored in AWS Key Management Service
+4. DynamoDB Table for persisting data..
+5. API key
 
 ## Development Environment prerequisites
 ---

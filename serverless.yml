@@ -52,14 +52,7 @@ provider:
 
 # IAM roles to access resources defined later in the file
   iamRoleStatements:
-    # Access Parameter Store
-    - Effect: Allow
-      Action:
-        - 'ssm:Describe*'
-        - 'ssm:Get*'
-        - 'ssm:List*'
-      Resource: '*'
-
+ 
     # DynamoDB
     - Effect: Allow
       Action:
