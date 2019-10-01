@@ -1,0 +1,7 @@
+flask
+flask-cors
+boto3
+pendulum
+bcrypt
+flask_jwt_extended
+requests

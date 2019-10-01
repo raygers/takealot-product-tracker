@@ -1,0 +1,10 @@
+flask
+flask-cors
+boto3
+pendulum
+bcrypt
+flask_jwt_extended
+pylint
+pytest
+pytest-cov
+requests
