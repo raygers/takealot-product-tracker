@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "78dfbe37-c274-43ef-9c7a-a0481ba929df",
+		"name": "Takealot Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\": \"tracy\",\n\"password\": \"dassadasdsad\",\n\"name\": \"Tracy\",\n\"surname\": \"Gerstner\",\n\"email_address\": \"tracygerstner@gmail.com\",\n\"plds\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"tracy\",\n\t\"password\" : \"dassadasdsad\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Protected path test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjU0NTk5MjYsIm5iZiI6MTU2NTQ1OTkyNiwianRpIjoiN2Y5Njk0M2MtYmJhOC00NTY5LTg5NWMtNTMyMzM4NTg0NTI2IiwiZXhwIjoxNTY1NTQ2MzI2LCJpZGVudGl0eSI6InJheWdlcnMiLCJmcmVzaCI6dHJ1ZSwidHlwZSI6ImFjY2VzcyJ9.aMVplko1q0CaNinhHTugKMXKHvVW2fv1CWnqjbYbGoo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users/protected-path-test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"protected-path-test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/products/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Njk5NTM5MzIsIm5iZiI6MTU2OTk1MzkzMiwianRpIjoiMTViYWRkNzktMTBjMC00YTA2LTllYjAtMzdkNWQ1MTQ4YjNkIiwiZXhwIjoxNTcwMDQwMzMyLCJpZGVudGl0eSI6InJheWdlcnMiLCJmcmVzaCI6dHJ1ZSwidHlwZSI6ImFjY2VzcyJ9.x5wzr9V9EiQYhCrTMqIjohlMqGDJwz4hkmcw9h3FcE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add/Update Users PLD's",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjU3MzA4MjcsIm5iZiI6MTU2NTczMDgyNywianRpIjoiOGQxMTEzYTctNmU0OS00YjExLTk4Y2YtODJjZmI4YjY3OTQyIiwiZXhwIjoxNTY1ODE3MjI3LCJpZGVudGl0eSI6InJheWdlcnMiLCJmcmVzaCI6dHJ1ZSwidHlwZSI6ImFjY2VzcyJ9.CKi4tn_ifhUC0LjDAnRqiJYzYCYeux9UpcVfqjvu8eM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"name\": \"Samsung 55 Smart QLED TV\",\n\t\"pldcode\": \"PLID54524657\",\n\t\"active\": \"true\"\n\t},\n\t\t{\n\t\"name\": \"Ryobi - 18V Drill Kit\",\n\t\"pldcode\": \"PLID38160085\",\n\t\"active\": \"true\"\n\t},\n\t\t{\n\t\"name\": \"Aiwa Smart TV Box UHD/4K HDR\",\n\t\"pldcode\": \"PLID53707526\",\n\t\"active\": \"true\"\n\t}\n]\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/pld",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"pld"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
