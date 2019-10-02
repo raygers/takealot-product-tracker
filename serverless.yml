@@ -86,7 +86,7 @@ functions:
     environment:
       TAKEALOT_API_URL: 'https://api.takealot.com/rest/v-1-9-0/product-details/{pldcode}?platform=desktop'
     events:
-      - schedule: rate(120 minutes)
+      - schedule: rate(10 hours)
 
 resources:
   Resources:
